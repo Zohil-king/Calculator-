@@ -1,0 +1,290 @@
+body {
+  background: #121212;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.theme-toggle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.calculator {
+  width: 300px;
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00000088;
+}
+
+.display {
+  background: #000;
+  color: #0f0;
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  min-height: 50px;
+  word-wrap: break-word;
+  user-select: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #444;
+}
+
+button.equal {
+  grid-column: span 2;
+  background: #0a84ff;
+}
+
+button.equal:hover {
+  background: #0066cc;
+}
+
+button.zero {
+  grid-column: span 2;
+}
+
+.history {
+  background: #202020;
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  max-height: 500px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px #00000055;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.history-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+#clearHistoryBtn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#clearHistoryBtn:hover {
+  background: darkred;
+}
+
+#historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+#historyList li {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 4px;
+}
+
+/* Light Mode */
+body.light-mode {
+  background: #f0f0f0;
+  color: #000;
+  
+}
+
+/* === Light Mode Button Styling === */
+body.light-mode button[data-value="+"],
+body.light-mode button[data-value="-"],
+body.light-mode button[data-value="*"],
+body.light-mode button[data-value="/"],
+body.light-mode button[data-value="%"] {
+  background: #ff9500;
+  color: white;
+}
+body.light-mode button[data-value="+"]:hover,
+body.light-mode button[data-value="-"]:hover,
+body.light-mode button[data-value="*"]:hover,
+body.light-mode button[data-value="/"]:hover,
+body.light-mode button[data-value="%"]:hover {
+  background: #e08b00;
+}
+
+body.light-mode button[data-value="C"] {
+  background: crimson;
+  color: white;
+}
+body.light-mode button[data-value="C"]:hover {
+  background: darkred;
+}
+
+body.light-mode button[data-value="←"] {
+  background: #666;
+  color: white;
+}
+body.light-mode button[data-value="←"]:hover {
+  background: #555;
+}
+
+body.light-mode button.equal {
+  background: #0a84ff;
+  color: white;
+}
+body.light-mode button.equal:hover {
+  background: #0066cc;
+}
+
+body.light-mode #clearHistoryBtn {
+  background: crimson;
+  color: white;
+}
+body.light-mode #clearHistoryBtn:hover {
+  background: darkred;
+}
+
+
+body.light-mode .calculator {
+  background: #ffffff;
+  box-shadow: 0 0 10px #ccc;
+}
+
+body.light-mode .display {
+  background: #f9f9f9;
+  color: black;
+}
+
+body.light-mode button {
+  background: #e0e0e0;
+  color: black;
+}
+
+body.light-mode button:hover {
+  background: #d0d0d0;
+}
+
+body.light-mode .history {
+  background: #fafafa;
+  color: #000;
+}
+
+body.light-mode .history-header h3 {
+  color: #333;
+}
+
+body.light-mode #clearHistoryBtn {
+  background: #666;
+}
+
+/* Style for operator buttons */
+button[data-value="+"],
+button[data-value="-"],
+button[data-value="*"],
+button[data-value="/"],
+button[data-value="%"] {
+  background: #ff9500;
+  color: white;
+}
+
+button[data-value="+"]:hover,
+button[data-value="-"]:hover,
+button[data-value="*"]:hover,
+button[data-value="/"]:hover,
+button[data-value="%"]:hover {
+  background: #e08b00;
+}
+
+/* Operator buttons: + - * / % */
+button[data-value="+"],
+button[data-value="-"],
+button[data-value="*"],
+button[data-value="/"],
+button[data-value="%"] {
+  background: #ff9500;
+  color: white;
+}
+button[data-value="+"]:hover,
+button[data-value="-"]:hover,
+button[data-value="*"]:hover,
+button[data-value="/"]:hover,
+button[data-value="%"]:hover {
+  background: #e08b00;
+}
+
+/* Clear button (C) */
+button[data-value="C"] {
+  background: crimson;
+  color: white;
+}
+button[data-value="C"]:hover {
+  background: darkred;
+}
+
+/* Backspace (←) */
+button[data-value="←"] {
+  background: #666;
+  color: white;
+}
+button[data-value="←"]:hover {
+  background: #555;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: rgb(254, 246, 246);
+  font-style: italic;
+  padding: 0.5rem;
+}
+
+body.light-mode .footer {
+  color: #c21717;
+}
+
+body.dark-mode .footer {
+  color: #ffffff;
+}
+
+
+
+
