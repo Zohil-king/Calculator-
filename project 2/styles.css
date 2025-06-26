@@ -265,7 +265,7 @@ button[data-value="←"] {
   color: white;
 }
 button[data-value="←"]:hover {
-  background: #555;
+  background: #554;
 }
 
 .footer {
