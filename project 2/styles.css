@@ -1,5 +1,5 @@
 body {
-  background: #121213;
+  background: #121212;
   color: white;
   font-family: 'Segoe UI', sans-serif;
   transition: background 0.3s, color 0.3s;
@@ -284,6 +284,7 @@ body.light-mode .footer {
 body.dark-mode .footer {
   color: #ffffff;
 }
+
 
 
 
